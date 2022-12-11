@@ -1,0 +1,13 @@
+article{
+    border: 2px dashed rgb(187, 0, 255);
+    padding:40px;
+    margin: 20px;
+    overflow: scroll;
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+
+}
+article:hover{
+    box-shadow: 0px 0px 15px blue;
+}
