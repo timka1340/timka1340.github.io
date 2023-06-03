@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control form-control-lg" placeholder="name@example.com">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-lg btn-primary text-center w-100" @click="emailAuth">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5" >
+                <p class="text-center">OR</p>
+                <button class="btn btn-lg btn-light d-flex align-items-center justify-content-center w-100" @click="googleAuth" style="box-shadow: 0 0 5px rgba(0,0,0,0.5);">
+                    <img src="../google_logo.svg" style="margin-right: 10px;">
+                    Continue with Google
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 197, 236);
+    padding: 10px;
+}
+.menu_link{
+
+}
+#test_app{
+    border: 3px solid pink;
+    width: 96%;
+    margin:  0 auto;
+    height: 400px;
+}
