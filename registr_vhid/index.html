@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <label >Iм'я</label><br>
+    <div id="form">
+        <label >Iм'я</label><br>
     <input type="text" id="nam"><br><br>
     <label >Прізвище</label><br>
     <input type="text" id="lastname"><br><br>
@@ -19,6 +20,20 @@
     <input type="text" id="password"><br><br>
     <button onclick="email_pass_vhid()">ЗАреєструватись</button><br><br>
     <button onclick="googleVhid()">Вхід за допомогою гугл</button><br>
+    <button onclick="changeForm()">У мене є аккаунт</button>
+</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-auth.js"></script>

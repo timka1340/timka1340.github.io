@@ -13,17 +13,21 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="menu">
-        <div class="menu_button">
+    
+        
+    
+<div id="test_app">
+    <div class="menu_button"><div class="menu">
             <div><a href="#/home" class="menu_lik" >Головна</a></div>
-            <div><a href="" class="menu_lik" >Галерея</a></div>
+            <div><button href="" class="menu_lik" >Галерея</button></div>
             <div><a href="#/sots" class="menu_lik" >Товари</a></div>
-            <div><a href="" class="menu_lik" >Кошик</a></div>
-            <div><a href="" class="menu_lik" >Профіль</a></div>
-        </div>
-    </div>
-<div id="test_app"><component :is="currentView" /></div>
-
+            <div><button href="" class="menu_lik" >Кошик</button></div>
+            <div><a href="#/profil" class="menu_lik" >Профіль</a></div>
+            <div><button @click="signOut" class="menu_lik" >Вийти</button></div>
+            </div>
+        </div></div>
+        <component :is="currentView" />
+</div>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script>
