@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Каталог Товарів</title>
+    <script src="kans.js"></script>
+    <style>
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Каталог товаров</h1>
+    <div id="product-list">
+        <!-- Здесь будут отображаться товары -->
+    </div>
+    <script>
+        // Массив с информацией о товарах (заголовок, описание, цена и т. д.)
+        var products = [
+            {
+                name: "Ручка",
+                description: "Звичайна синя. Для писання",
+                price: 0.99,
+            },
+            {
+                name: "Зошит",
+                description: "Зошит в клітинкуііііі",
+                price: 19.99,
+            },
+            // Добавьте другие товары по аналогии
+        ];
+    
+        // Функция для отображения товаров в каталоге
+        function displayProducts() {
+            var productList = document.getElementById("product-list");
+    
+            // Очистка списка товаров перед отображением
+            productList.innerHTML = "";
+    
+            // Перебираем массив товаров и создаем карточку для каждого
+            products.forEach(function(product) {
+                var productCard = document.createElement("div");
+                productCard.className = "product-card";
+                productCard.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <p>${product.description}</p>
+                    <p>Цена: $${product.price}</p>
+                `;
+                productList.appendChild(productCard);
+            });
+        }
+    
+        // Вызываем функцию для отображения товаров при загрузке страницы
+        displayProducts();
+    </script>
+
+    
+</body>
+</html>
