@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="menu">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Категорії
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" @click="tovar_filter('markers')">Маркери</a></li>
+                  <li><a class="dropdown-item" href="#">Зошити</a></li>
+                  <li><a class="dropdown-item" href="#">Олівці</a></li>
+                  <li><a class="dropdown-item" href="#">Ручки</a></li>
+                  <li><a class="dropdown-item" href="#">Блокноти</a></li>
+                  <li><a class="dropdown-item" href="#" @click="all_products = all_products_copy">All tovars</a></li>
+                </ul>
+              </div>
+        </div>
+        <div class="tovari">
+            <tovar v-for="tov in all_products" :tov="tov"></tovar>
+        </div>
+        <div class="modal_main">
+          <div class="modal_order">
+            <lable></lable>
+            <br><input type="text" id="user_pib">Прізвище Імя По-Батькові<br><br>
+            <lable></lable>
+            <br><input type="text" id="user_sity">Місто<br><br>
+            <lable></lable>
+            <br><input type="text" id="user_phone">Номер Телефону<br><br>
+            <lable></lable>
+            <br><input type="text" id="user_address">Ареса<br><br>
+            <select name="" id="">
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+          </select><br><br>
+          <h2>Сумма замовлення<span>2000</span>грн</h2>
+          <button onclick=" ">Оформити замовлення</button>
+          </div>
+        </div>
+    </div>
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-auth.js"></script>
+    <script src="main.js"></script>
+    <script src="orders.js"></script>
+</body>
+</html>
