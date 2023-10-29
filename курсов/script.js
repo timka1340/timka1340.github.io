@@ -1,4 +1,4 @@
-// Приклад списку товарів (можна замінити на ваші дані)
+
 const products = [
     { id: 1, name: 'Ручка', price: 1.5 },
     { id: 2, name: 'Блокнот', price: 2.0 },
@@ -6,7 +6,7 @@ const products = [
     { id: 4, name: 'Маркери', price: 4.50 },
     { id: 3, name: 'Зошити', price: 0.5 },
     { id: 3, name: 'Пенал', price: 2.5 },
-    // Додайте більше товарів тут
+ 
   ];
   
   const productList = document.getElementById('productList');
@@ -15,7 +15,7 @@ const products = [
   const checkoutBtn = document.getElementById('checkoutBtn');
   const searchInput = document.getElementById('searchInput');
   
-  // Заповнення списку товарів
+  
   function renderProducts() {
     productList.innerHTML = '';
     products.forEach(product => {
@@ -30,7 +30,7 @@ const products = [
     });
   }
   
-  // Додавання товару до кошика
+
   function addToCart(productId) {
     const product = products.find(item => item.id === productId);
     if (product) {
@@ -39,7 +39,7 @@ const products = [
     }
   }
   
-  // Оновлення загальної вартості кошика
+
   function updateTotal() {
     const cartItemsList = cartItems.querySelectorAll('li');
     let total = 0;
@@ -50,14 +50,12 @@ const products = [
     totalElement.textContent = `Загальна вартість: $${total.toFixed(2)}`;
   }
   
-  // Пошук товарів
   searchInput.addEventListener('input', () => {
     const searchTerm = searchInput.value.toLowerCase();
     const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchTerm));
     renderFilteredProducts(filteredProducts);
   });
   
-  // Відображення відфільтрованих товарів
   function renderFilteredProducts(filteredProducts) {
     productList.innerHTML = '';
     filteredProducts.forEach(product => {
@@ -72,7 +70,7 @@ const products = [
     });
   }
   
-  // Оформлення замовлення
+
   checkoutBtn.addEventListener('click', () => {
     alert('Замовлення оформлено! Дякуємо за покупку.');
     cartItems.innerHTML = '';
@@ -80,6 +78,6 @@ const products = [
   });
   
   
-  // Запуск
+ 
   renderProducts();
   

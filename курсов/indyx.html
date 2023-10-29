@@ -18,10 +18,10 @@
 <body>
     <h1>Каталог товаров</h1>
     <div id="product-list">
-        <!-- Здесь будут отображаться товары -->
+        
     </div>
     <script>
-        // Массив с информацией о товарах (заголовок, описание, цена и т. д.)
+    
         var products = [
             {
                 name: "Ручка",
@@ -33,17 +33,16 @@
                 description: "Зошит в клітинкуііііі",
                 price: 19.99,
             },
-            // Добавьте другие товары по аналогии
+          
         ];
     
-        // Функция для отображения товаров в каталоге
+       
         function displayProducts() {
             var productList = document.getElementById("product-list");
     
-            // Очистка списка товаров перед отображением
             productList.innerHTML = "";
     
-            // Перебираем массив товаров и создаем карточку для каждого
+            
             products.forEach(function(product) {
                 var productCard = document.createElement("div");
                 productCard.className = "product-card";
@@ -56,7 +55,7 @@
             });
         }
     
-        // Вызываем функцию для отображения товаров при загрузке страницы
+        
         displayProducts();
     </script>
 
